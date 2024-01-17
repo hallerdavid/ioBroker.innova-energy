@@ -1,114 +1,116 @@
 {
-	"common": {
-		"name": "innova-energy",
-		"version": "0.0.1",
-		"news": {
-			"0.0.1": {
-				"en": "initial release",
-				"de": "Erstveröffentlichung",
-				"ru": "Начальная версия",
-				"pt": "lançamento inicial",
-				"nl": "Eerste uitgave",
-				"fr": "Première version",
-				"it": "Versione iniziale",
-				"es": "Versión inicial",
-				"pl": "Pierwsze wydanie",
-				"uk": "Початкова версія",
-				"zh-cn": "首次出版"
-			}
-		},
-		"title": "innova energy",
-		"titleLang": {
-			"en": "innova energy",
-			"de": "Innovationsenergie",
-			"ru": "инновационная энергия",
-			"pt": "energia inovadora",
-			"nl": "innovatieve energie",
-			"fr": "énergie innovante",
-			"it": "energia innovativa",
-			"es": "energía innovadora",
-			"pl": "innowacyjna energia",
-			"uk": "інноваційна енергія",
-			"zh-cn": "创新能源"
-		},
-		"desc": {
-			"en": "This is a small adapter for innova energy devices. You can control them and get the actual state.",
-			"de": "Dies ist ein kleiner Adapter für Innova Energy-Geräte. Sie können sie steuern und den tatsächlichen Zustand abrufen.",
-			"ru": "Это небольшой адаптер для устройств Innova Energy. Вы можете управлять ими и получать фактическое состояние.",
-			"pt": "Este é um pequeno adaptador para dispositivos de energia innova. Você pode controlá-los e obter o estado real.",
-			"nl": "Dit is een kleine adapter voor innova energy apparaten. U kunt ze besturen en de werkelijke status verkrijgen.",
-			"fr": "Il s'agit d'un petit adaptateur pour les appareils Innova Energy. Vous pouvez les contrôler et obtenir l'état réel.",
-			"it": "Questo è un piccolo adattatore per dispositivi innova Energy. Puoi controllarli e ottenere lo stato attuale.",
-			"es": "Este es un pequeño adaptador para dispositivos de energía innova. Puedes controlarlos y obtener el estado real.",
-			"pl": "Jest to niewielki adapter do urządzeń innova Energy. Można je kontrolować i uzyskać aktualny stan.",
-			"uk": "Це невеликий адаптер для пристроїв Innova Energy. Ви можете контролювати їх і отримувати фактичний стан.",
-			"zh-cn": "这是用于 innova 能源设备的小型适配器。您可以控制它们并获取实际状态。"
-		},
-		"authors": ["David Haller <david@hallerdavid.de>"],
-		"keywords": [
-			"innova",
-			"climate",
-			"climatecontrol",
-			"air",
-			"aircon",
-			"airconditioner",
-			"innovaenergy",
-			"innova2"
-		],
-		"license": "MIT",
-		"platform": "Javascript/Node.js",
-		"main": "main.js",
-		"icon": "innova-energy.png",
-		"enabled": true,
-		"extIcon": "https://raw.githubusercontent.com/hallerdavid/ioBroker.innova-energy/main/admin/innova-energy.png",
-		"readme": "https://github.com/hallerdavid/ioBroker.innova-energy/blob/main/README.md",
-		"loglevel": "info",
-		"tier": 3,
-		"mode": "daemon",
-		"type": "climate-control",
-		"compact": true,
-		"connectionType": "local",
-		"dataSource": "poll",
-		"adminUI": {
-			"config": "json"
-		},
-		"dependencies": [
-			{
-				"js-controller": ">=3.3.22"
-			}
-		],
-		"globalDependencies": [
-			{
-				"admin": ">=5.1.13"
-			}
-		]
-	},
-	"native": {
-		"option1": true,
-		"option2": "42"
-	},
-	"objects": [],
-	"instanceObjects": [
-		{
-			"_id": "info",
-			"type": "channel",
-			"common": {
-				"name": "Information"
-			},
-			"native": {}
-		},
-		{
-			"_id": "info.connection",
-			"type": "state",
-			"common": {
-				"role": "indicator.connected",
-				"name": "Device or service connected",
-				"type": "boolean",
-				"read": true,
-				"write": false,
-				"def": false
-			},
-			"native": {}
-		}
-	]
+    "common": {
+        "name": "innova-energy",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "innova energy",
+        "titleLang": {
+            "en": "innova energy",
+            "de": "Innovationsenergie",
+            "ru": "инновационная энергия",
+            "pt": "energia inovadora",
+            "nl": "innovatieve energie",
+            "fr": "énergie innovante",
+            "it": "energia innovativa",
+            "es": "energía innovadora",
+            "pl": "innowacyjna energia",
+            "uk": "інноваційна енергія",
+            "zh-cn": "创新能源"
+        },
+        "desc": {
+            "en": "This is a small adapter for innova energy devices. You can control them and get the actual state.",
+            "de": "Dies ist ein kleiner Adapter für Innova Energy-Geräte. Sie können sie steuern und den tatsächlichen Zustand abrufen.",
+            "ru": "Это небольшой адаптер для устройств Innova Energy. Вы можете управлять ими и получать фактическое состояние.",
+            "pt": "Este é um pequeno adaptador para dispositivos de energia innova. Você pode controlá-los e obter o estado real.",
+            "nl": "Dit is een kleine adapter voor innova energy apparaten. U kunt ze besturen en de werkelijke status verkrijgen.",
+            "fr": "Il s'agit d'un petit adaptateur pour les appareils Innova Energy. Vous pouvez les contrôler et obtenir l'état réel.",
+            "it": "Questo è un piccolo adattatore per dispositivi innova Energy. Puoi controllarli e ottenere lo stato attuale.",
+            "es": "Este es un pequeño adaptador para dispositivos de energía innova. Puedes controlarlos y obtener el estado real.",
+            "pl": "Jest to niewielki adapter do urządzeń innova Energy. Można je kontrolować i uzyskać aktualny stan.",
+            "uk": "Це невеликий адаптер для пристроїв Innova Energy. Ви можете контролювати їх і отримувати фактичний стан.",
+            "zh-cn": "这是用于 innova 能源设备的小型适配器。您可以控制它们并获取实际状态。"
+        },
+        "authors": [
+            "David Haller <david@hallerdavid.de>"
+        ],
+        "keywords": [
+            "innova",
+            "climate",
+            "climatecontrol",
+            "air",
+            "aircon",
+            "airconditioner",
+            "innovaenergy",
+            "innova2"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "innova-energy.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/hallerdavid/ioBroker.innova-energy/main/admin/innova-energy.png",
+        "readme": "https://github.com/hallerdavid/ioBroker.innova-energy/blob/main/README.md",
+        "loglevel": "info",
+        "tier": 3,
+        "mode": "daemon",
+        "type": "climate-control",
+        "compact": true,
+        "connectionType": "local",
+        "dataSource": "poll",
+        "adminUI": {
+            "config": "json"
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=3.3.22"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.1.13"
+            }
+        ]
+    },
+    "native": {
+        "option1": true,
+        "option2": "42"
+    },
+    "objects": [],
+    "instanceObjects": [
+        {
+            "_id": "info",
+            "type": "channel",
+            "common": {
+                "name": "Information"
+            },
+            "native": {}
+        },
+        {
+            "_id": "info.connection",
+            "type": "state",
+            "common": {
+                "role": "indicator.connected",
+                "name": "Device or service connected",
+                "type": "boolean",
+                "read": true,
+                "write": false,
+                "def": false
+            },
+            "native": {}
+        }
+    ]
 }
